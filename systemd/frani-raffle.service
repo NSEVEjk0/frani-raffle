@@ -1,0 +1,20 @@
+[Unit]
+Description=frani-raffle — UCT invoicing on Unicity testnet2
+Documentation=https://github.com/NSEVEjk0/frani-raffle
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/projects/frani-raffle
+EnvironmentFile=-/home/ubuntu/projects/frani-raffle/.env
+ExecStart=/usr/bin/node bin/invoice.js daemon
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

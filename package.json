@@ -1,0 +1,25 @@
+{
+  "name": "frani-raffle",
+  "version": "1.0.0",
+  "description": "Ticket sales plus a verifiable draw via the testnet2 oracle. Made by CRYPTFRANI.",
+  "type": "module",
+  "bin": {
+    "frani-raffle": "bin/frani-raffle.js"
+  },
+  "scripts": {
+    "start": "node bin/frani-raffle.js daemon",
+    "new": "node bin/frani-raffle.js new",
+    "list": "node bin/frani-raffle.js list",
+    "about": "node bin/frani-raffle.js about",
+    "help": "node bin/frani-raffle.js help",
+    "test": "node test/frani-raffle.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@unicitylabs/sphere-sdk": "0.17.3",
+    "ws": "^8.21.3"
+  }
+}
